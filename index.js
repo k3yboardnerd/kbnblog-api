@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 dotenv.config()
 import cookieparser from "cookie-parser"
 import path from 'path'
+import cors from 'cors'
 // Subscriber
 import postRoutes from "./routes/postRoutes.js"
 import commentsRoutes from './routes/commentRoutes.js'
@@ -28,12 +29,12 @@ const app = express()
 app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
 app.use(cookieparser())
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://kbnblog.onrender.com')
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-  res.header('Access-Control-Allow-Headers', 'Content-Type')
-  next()
-})
+app.use(cors({
+  origin: 'https://kbnblog.onrender.com',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}))
 app.use('/api/users', userRoutes)
 app.use('/api/posts', postRoutes)
 app.use('/api/comments', commentsRoutes)
