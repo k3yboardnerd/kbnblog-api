@@ -33,6 +33,7 @@ app.use(cors({
   origin: 'https://kbnblog.onrender.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Set-Cookie'],
   credentials: true,
 }))
 app.use('/api/users', userRoutes)
