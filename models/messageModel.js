@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const messageSchema = mongoose.Schema({
   subscriber: {
     type: mongoose.Types.ObjectId,
+    ref: 'Subscriber',
     required: true
   },
   text: {
