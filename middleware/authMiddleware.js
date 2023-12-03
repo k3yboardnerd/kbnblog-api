@@ -9,9 +9,6 @@ export const protect = asyncHandler(async (req, res, next) => {
   if (!token) {
     const authorization = req.header("Authorization");
 
-console.log('Cookie Token:', req.cookies.jwt);
-console.log('Authorization Token:', authorization);
-
     if (authorization && authorization.startsWith("Bearer ")) {
       token = authorization.split(" ")[1]; // Extract token from header
     }
