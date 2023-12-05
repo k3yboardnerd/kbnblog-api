@@ -1,5 +1,12 @@
 
 
+## [1.2.1](https://github.com/k3yboardnerd/kbnblog-api/compare/1.2.0...1.2.1) (2023-12-05)
+
+
+### Bug Fixes
+
+* messages were not sent ([716b9e3](https://github.com/k3yboardnerd/kbnblog-api/commit/716b9e3dabe0715866e0021e0700b5226b6860df))
+
 ## [1.2.0](https://github.com/k3yboardnerd/kbnblog-api/compare/1.1.5...1.2.0) (2023-12-05)
 
 
