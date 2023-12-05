@@ -15,7 +15,7 @@ export const sendMessage = asynchandler(async (req, res) => {
   const subscriberExists = await Subscriber.findById(subscriber)
 
   // check if subscriber exists
-  if (subscriberExists && subscriberExists.donationTotal >= 10) {
+  if (subscriberExists && subscriberExists.donationTotal >= 2) {
     // create a new meesage
     const message = await Message.create({ subscriber, text, subject })
     // respond with success
