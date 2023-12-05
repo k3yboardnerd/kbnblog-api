@@ -13,6 +13,7 @@ export const viewsTracker = asyncHandler(async (req, res, next) => {
   if (!subscriber) {
     res.status(404)
     throw new Error('Subscriber not found')
+    next()
   }
 
   // Update the views of the subscriber
@@ -24,6 +25,7 @@ export const viewsTracker = asyncHandler(async (req, res, next) => {
   if (!post) {
     res.status(404)
     throw new Error('Post not found')
+    next()
   }
   post.views += 1
   await post.save()
