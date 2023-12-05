@@ -37,7 +37,7 @@ const getAllPosts = asyncHandler(async (req, res) => {
  * @route   GET /api/posts/:id
  * @access  public
  */
-const getPostById = asyncHandler(async (req, res) => {
+const getPostById = asyncHandler(async (req, res, next) => {
   // const { id } = req.params
   console.log(req.subscriber)
   const myPost = await Post.findById(req.params.id).exec()
@@ -61,7 +61,7 @@ const getPostById = asyncHandler(async (req, res) => {
     res.status(400)
     throw new Error("Something bad happened!")
   }
-
+  next()
 })
 
 /**
