@@ -1,5 +1,12 @@
 
 
+## [1.2.0](https://github.com/k3yboardnerd/kbnblog-api/compare/1.1.5...1.2.0) (2023-12-05)
+
+
+### Features
+
+* add views tracker for posts ([40479e6](https://github.com/k3yboardnerd/kbnblog-api/commit/40479e65b26fd44e0e24c82d59403e14a153302f))
+
 ## [1.1.5](https://github.com/k3yboardnerd/kbnblog-api/compare/1.1.4...1.1.5) (2023-12-05)
 
 
