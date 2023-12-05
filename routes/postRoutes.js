@@ -8,7 +8,7 @@ import { viewsTracker } from "../middleware/viewsTracker.js"
 const router = express.Router()
 
 router.route("/").get(getAllPosts).post(protect, createNewPost)
-router.route("/:id").get(viewsTracker, getPostById).delete(protect, deletePost)
+router.route("/:id").get(getPostById, viewsTracker).delete(protect, deletePost)
 router.route("/:id/edit").put(protect, updatePost)
 
 export default router
