@@ -6,10 +6,9 @@ import asyncHandler from "express-async-handler"
  * @desc    This middleware tracks viewed posts for the user
  */
 export const viewsTracker = asyncHandler(async (req, res, next) => {
-  const { _id } = req.body
-  const { id } = req.params
+  const { id, subId } = req.params
 
-  const subscriber = await Subscriber.findById(_id)
+  const subscriber = await Subscriber.findById(subId)
   if (!subscriber) {
     res.status(404)
     throw new Error('Subscriber not found')

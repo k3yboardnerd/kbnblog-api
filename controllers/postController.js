@@ -34,7 +34,7 @@ const getAllPosts = asyncHandler(async (req, res) => {
 
 /**
  * @desc    Get post by id
- * @route   GET /api/posts/:id
+ * @route   GET /api/posts/:id/:subId
  * @access  public
  */
 const getPostById = asyncHandler(async (req, res, next) => {
