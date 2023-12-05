@@ -1,5 +1,12 @@
 
 
+## [1.1.1](https://github.com/k3yboardnerd/kbnblog-api/compare/1.1.0...1.1.1) (2023-12-05)
+
+
+### Bug Fixes
+
+* tests for dev ([2046302](https://github.com/k3yboardnerd/kbnblog-api/commit/20463025480b6b9156c2886f0a9fc825e5e9e03b))
+
 ## [1.1.0](https://github.com/k3yboardnerd/kbnblog-api/compare/1.0.3...1.1.0) (2023-12-05)
 
 

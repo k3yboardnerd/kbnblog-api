@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "description": "kbn blog is my personal blog.",
   "main": "index.js",
