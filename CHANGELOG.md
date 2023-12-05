@@ -1,5 +1,12 @@
 
 
+## [1.1.4](https://github.com/k3yboardnerd/kbnblog-api/compare/1.1.3...1.1.4) (2023-12-05)
+
+
+### Bug Fixes
+
+* views tracker bugs ([b6e73e2](https://github.com/k3yboardnerd/kbnblog-api/commit/b6e73e29bd4c6babc1c487062b0f697d34c02440))
+
 ## [1.1.3](https://github.com/k3yboardnerd/kbnblog-api/compare/1.1.2...1.1.3) (2023-12-05)
 
 
