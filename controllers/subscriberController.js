@@ -30,7 +30,7 @@ const subscription = asyncHandler(async (req, res) => {
       donationTotal: alreadySubscribed.donationTotal
     })
 
-    req.subscriber = alreadySubscribed
+    // req.subscriber = alreadySubscribed
   }
   
   if (emailExists) {
@@ -51,7 +51,7 @@ const subscription = asyncHandler(async (req, res) => {
       views: sub.views,
       donationTotal: sub.donationTotal
     })
-    req.subscriber = sub
+    // req.subscriber = sub
   } else {
     res.status(500)
     throw new Error("Something went wrong while subscribing. Please refresh and try again, or try again later.")
