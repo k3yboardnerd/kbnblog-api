@@ -39,6 +39,7 @@ const getAllPosts = asyncHandler(async (req, res) => {
  */
 const getPostById = asyncHandler(async (req, res) => {
   // const { id } = req.params
+  console.log(req.subscriber)
   const myPost = await Post.findById(req.params.id).exec()
   const author = await User.findById(myPost.user, 'name admin photo').exec()
   if (myPost) {
