@@ -15,20 +15,22 @@ export const viewsTracker = asyncHandler(async (req, res, next) => {
     next()
   }
 
-  // Update the views of the subscriber
-  subscriber.views.push({ postId: id, viewedOn: Date.now() })
-  await subscriber.save()
+  // Check if the post has already been viewed by the subscriber
+  const postViewed = subscriber.views.some(view => view.postId.toString() === id)
+  if (!postViewed) {
+    // If the post has not been viewed yet, add it to the views of the subscriber
+    subscriber.views.push({ postId: id, viewedOn: Date.now() })
+    await subscriber.save()
 
-  // Update the views of the post
-  const post = await Post.findById(id)
-  if (!post) {
-    res.status(404)
-    throw new Error('Post not found')
-    next()
+    // Update the views of the post
+    const post = await Post.findById(id)
+    if (!post) {
+      res.status(404)
+      throw new Error('Post not found')
+      next()
+    }
+    post.views += 1
+    await post.save()
   }
-  post.views += 1
-  await post.save()
   next()
 })
-
-
