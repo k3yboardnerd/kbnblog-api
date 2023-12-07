@@ -1,5 +1,13 @@
 
 
+## [1.2.2](https://github.com/k3yboardnerd/kbnblog-api/compare/1.2.1...1.2.2) (2023-12-07)
+
+
+### Bug Fixes
+
+* **.gitignore:** removing vcode extensions from tracklist ([1cdb337](https://github.com/k3yboardnerd/kbnblog-api/commit/1cdb33781686ad77fc7df53283585a5bc66280aa))
+* **package.json:** add the token for ease release management ([ecc4f54](https://github.com/k3yboardnerd/kbnblog-api/commit/ecc4f54bc4e1d85000cad64a70795e5100a07f27))
+
 ## [1.2.1](https://github.com/k3yboardnerd/kbnblog-api/compare/1.2.0...1.2.1) (2023-12-05)
 
 
