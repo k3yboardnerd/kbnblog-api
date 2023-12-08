@@ -1,5 +1,13 @@
 
 
+## [1.2.3](https://github.com/k3yboardnerd/kbnblog-api/compare/1.2.2...1.2.3) (2023-12-08)
+
+
+### Bug Fixes
+
+* **admin subscribers:** feature support for subscribers management ([d757602](https://github.com/k3yboardnerd/kbnblog-api/commit/d7576025432da140061a5ec115c34d4c6417d4ff))
+* **comments:** feature support for comments and dependencies updates ([c337a83](https://github.com/k3yboardnerd/kbnblog-api/commit/c337a83015669bb101e059d1b5e297e3d4506fce))
+
 ## [1.2.2](https://github.com/k3yboardnerd/kbnblog-api/compare/1.2.1...1.2.2) (2023-12-07)
 
 
