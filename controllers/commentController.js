@@ -98,7 +98,7 @@ const deleteComment = asyncHandler(async (req, res) => {
   const comment = await Comment.findById(req.params.id).exec()
   
   if (comment) {
-    await comment.remove()
+    await Comment.findByIdAndDelete(req.params.id)
   }
   res.json({ message: "Deleted!"})
 })
