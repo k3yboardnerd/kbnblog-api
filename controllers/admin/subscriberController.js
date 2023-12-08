@@ -63,7 +63,7 @@ const deleteSubscriber = asyncHandler(async (req, res) => {
           // find all comments and delete
           await Comment.deleteMany({ subscriber: id })
           // delete subscriber
-          await sub.remove()
+          await Subscriber.findByIdAndDelete(id)
           // confirmation
           res.status(200).json({message: "Subscriber deleted!"})
         } else {
